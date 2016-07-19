@@ -143,7 +143,7 @@ function parseURLFile (result, fileToGen, cb)
     }
     longPollArrStr += "    parseURLReq.timeout(req, res, ";
     if (null != timeout) {
-      longPollArrStr += parseInt(itemList[i]['timeout']) + ");\n";
+      longPollArrStr += Number(itemList[i]['timeout']) + ");\n";
     } else {
       longPollArrStr += "parseURLReq.global.DFLT_HTTP_REQUEST_TIMEOUT_TIME);\n";
     }
